@@ -1,0 +1,25 @@
+/* backtop.css */
+#back-to-top {
+    display: none; /* 初始隐藏 */
+    position: fixed;
+    bottom: 20px; /* 距离底部 20px，可以根据需要调整 */
+    right: 20px; /* 距离右侧 20px，可以根据需要调整 */
+    z-index: 999; /* 确保在其他内容上面显示 */
+    background-color: transparent; /* 背景透明 */
+    border: none; /* 无边框 */
+}
+
+#back-to-top a {
+    display: inline-block;
+    background-color: transparent; /* 链接背景透明 */
+    border: none; /* 无边框 */
+}
+
+#back-to-top a img {
+    width: 50px !important; /* 设置图片的宽度 */
+    height: 50px !important; /* 设置图片的高度 */
+    opacity: 1 !important; /* 设置图片完全不透明 */
+    filter: none !important; /* 确保没有滤镜影响透明度 */
+    border: none !important; /* 无边框 */
+    background: transparent !important; /* 背景透明 */
+}
