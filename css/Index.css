@@ -1,6 +1,7 @@
 *{
     list-style: none;
     background-color: rgb(210, 237, 248);
+    z-index: 1;
 }
 #top{
     width: 100%;

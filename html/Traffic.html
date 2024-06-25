@@ -7,9 +7,33 @@
         <title>交通</title>
         <link rel="stylesheet" href="../css/Index.css" type="text/css">
         <link rel="stylesheet" href="../css/traffic.css" type="text/css">
-        <link rel="stylesheet" href="../css/backtop.css" type="text/css"> 
+        <link rel="stylesheet" href="../css/backtop.css" type="text/css">
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=	9a7401993b99a43d7f5657f7c92cf9c2"></script>
+        <script>
+            function initMap() {
+                var map = new AMap.Map('map', {
+                    center: [104.955, 33.3694], // 设置中心点为陇南市
+                    zoom: 10 // 设置缩放级别
+                });
+
+                var marker = new AMap.Marker({
+                    position: new AMap.LngLat(104.955, 33.3694) // 标记位置
+                });
+
+                map.add(marker);
+            }
+        </script>
+        <style>
+            #map {
+                width: 100%;
+                height: 560px;
+                background-color: rgb(255, 255, 255); /* 确保背景为不透明 */
+                opacity: 1 !important; /* 确保完全不透明 */
+                z-index: 10; /* 设置一个比周围元素更高的层级 */
+            }
+        </style>
     </head>
-    <body>
+    <body onload="initMap()">
         <div id="top">
             <a href="index.html">
                 <img src="../image/logo1.png" class="img1"/>
@@ -26,8 +50,7 @@
                 <a href="http://www.lnszsks.com/">陇南教育</a>
             </div>
         </div>
-        <hr style="height:10px;border:none;border-top:10px groove rgb(14,
-            143, 194);" />
+        <hr style="height:10px;border:none;border-top:10px groove rgb(14, 143, 194);" />
         <div id="top2">
             <div id="nav">
                 <ul>
@@ -43,8 +66,7 @@
                 </ul>
             </div>
         </div>
-        <hr style="height:1px;border:none;border-top:1px dashed goldenrod;"
-            />
+        <hr style="height:1px;border:none;border-top:1px dashed goldenrod;" />
         <div id="T-center">
             <div id="T-text1">
                 <p style="font-size: 30px;">公路</p>
@@ -56,14 +78,7 @@
                 </p>
             </div>
             <div id="T-map">
-                <div id="down">
-                    <a
-                        href="https://map.baidu.com/search/%E9%99%87%E5%8D%97%E5%B8%82/@11684985,3921599.5,14z?querytype=s&da_src=shareurl&wd=%E9%99%87%E5%8D%97%E5%B8%82&c=299&src=0&pn=0&sug=0&l=14&b=(13068894,3563552.25;13091934,3575104.25)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2">
-                        点击跳转至百度地图
-                    </a>
-                </div>
-                <img src="../image/map.png" width="100%"
-                    height="560px">
+                <div id="map"></div>
             </div>
             <div id="T-text2">
                 <p style="font-size: 30px;">铁路</p>
@@ -71,16 +86,15 @@
                     铁道线路：兰渝铁路、宝成铁路、天平铁路南延线、阳平关至陇南至九寨沟铁路、合作至哈达铺至徽县铁路、兰州至天水至汉中城际铁路。
                 </p>
                 <p>
-                    截至2018年末，陇南境内建有兰渝铁路、宝成铁路，规划有天平铁路南延线、阳平关至陇南至九寨沟铁路、合作至哈达铺至徽县铁路。
-                    兰渝铁路于2017年9月30日全线通车，陇南境内有222千米，设有陇南站、宕昌哈达铺站。2022年，陇南站完成旅客发送任务72.3万人，日运送旅客最高达7500多人次。正在新建天水至陇南铁路，全长208.2千米，全线设站18处，设计时速160千米/小时，项目概算总投资245.3亿元。
+                    截至2018年末，陇南境内建有兰渝铁路、宝成铁路，规划有天平铁路南延线、阳平关至陇南至九寨沟铁路、合作至哈达铺至徽县铁路。兰渝铁路于2017年9月30日全线通车，陇南境内有222千米，设有陇南站、宕昌哈达铺站。2022年，陇南站完成旅客发送任务72.3万人，日运送旅客最高达7500多人次。正在新建天水至陇南铁路，全长208.2千米，全线设站18处，设计时速160千米/小时，项目概算总投资245.3亿元。
                 </p>
                 <p style="font-size: 30px;">航空</p>
                 <p>
-                    截至2018年3月，陇南有支线机场1处，规划有通用机场3处，风景区起降点4处。陇南成县机场于2018年通航运营，开通航线9条，通达北京、上海、深圳等13座城市，航线里程达到3.8万千米。2022年，完成运输起降2904架次，旅客吞吐量19.09万人次，货邮吞吐量108.8吨。.09亿元，占地3200亩，飞行区规划等级为4C，现已建成，2013年7月29日已通航，现已开辟至北京、上海、成都、广州、厦门航线，池州周边分别还有合肥、安庆、黄山、南京民航机场。
+                    截至2018年3月，陇南有支线机场1处，规划有通用机场3处，风景区起降点4处。陇南成县机场于2018年通航运营，开通航线9条，通达北京、上海、深圳等13座城市，航线里程达到3.8万千米。2022年，完成运输起降2904架次，旅客吞吐量19.09万人次，货邮吞吐量108.8吨。
                 </p>
                 <p style="font-size: 30px;">航运</p>
                 <p>
-                    截至2015年底，陇南港有白龙湖、碧口2个港区，内河通航水域分别为白龙江航道、白水江航道、让水河航道，航道总里程194千米，均为通航航段。陇南港口共有码头25座、泊位31个。其中，白龙江汉王至曲水湾136千米航道，中庙至罐子沟16千米航道Ⅵ级；白水江关头坝——玉垒16千米航道Ⅵ级；让水河范坝—河口段24千米航道Ⅵ级。截至2015年底，陇南港口共有码头25座、泊位31个。根据《甘肃省秦巴山片区区域发展与扶贫攻坚实施规划（2016—2020年）》陇南港规划增建码头，建设白龙江碧口库区航运工程，努力实现白龙江主要区段通航。.5公里，现有3000吨级泊位17个，5000吨级泊位11个。池州港泥洲港区常年可停靠5000吨级船舶，年设计综合通过能力461万吨。池州港是800里皖江外籍游轮、国内大型游轮进入“两山一湖”地区的定点停靠码头。
+                    截至2015年底，陇南港有白龙湖、碧口2个港区，内河通航水域分别为白龙江航道、白水江航道、让水河航道，航道总里程194千米，均为通航航段。陇南港口共有码头25座、泊位31个。其中，白龙江汉王至曲水湾136千米航道，中庙至罐子沟16千米航道Ⅵ级；白水江关头坝——玉垒16千米航道Ⅵ级；让水河范坝—河口段24千米航道Ⅵ级。截至2015年底，陇南港口共有码头25座、泊位31个。根据《甘肃省秦巴山片区区域发展与扶贫攻坚实施规划（2016—2020年）》陇南港规划增建码头，建设白龙江碧口库区航运工程，努力实现白龙江主要区段通航。
                 </p>
             </div>
         </div>
