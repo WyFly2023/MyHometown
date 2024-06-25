@@ -15,14 +15,21 @@
                     center: [104.955, 33.3694], // 设置中心点为陇南市
                     zoom: 10 // 设置缩放级别
                 });
-
+        
                 var marker = new AMap.Marker({
                     position: new AMap.LngLat(104.955, 33.3694) // 标记位置
                 });
-
+        
+                // 添加点击事件
+                marker.on('click', function(e) {
+                    // 在新标签页中打开高德地图
+                    window.open('https://ditu.amap.com/search?query=%E9%99%87%E5%8D%97%E5%B8%82');
+                });
+        
                 map.add(marker);
             }
         </script>
+        
         <style>
             #map {
                 width: 100%;
@@ -61,7 +68,7 @@
                     <li><a href="../html/Foods.html">美食</a></li>
                     <li><a href="../html/Views.html">景点</a></li>
                     <li><a href="../html/Traffic.html">交通</a></li>
-                    <li><a href="../html/Natural.html">自然</a></li>
+                    <li><a href="../html/Natural.html">资源</a></li>
                     <li><a href="../html/honor.html">荣誉</a></li>
                 </ul>
             </div>
